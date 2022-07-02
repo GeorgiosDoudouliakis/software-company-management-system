@@ -1,0 +1,35 @@
+<nav [ngClass]="!isExpanded ? '' : 'expand-nav'">
+    <ul>
+        <!-- ADMIN LINKS -->
+        <li>
+            <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
+                <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">business</span>
+                <span *ngIf="isExpanded">Company</span>
+            </a>
+        </li>
+        <li>
+            <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">    
+                <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">people</span>
+                <span *ngIf="isExpanded">Employees</span>
+            </a>
+        </li>
+        <!-- END OF ADMIN LINKS -->
+
+        <!-- MANAGER AND DEVELOPER LINKS -->
+        <li>
+            <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">    
+                <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">task</span>
+                <span *ngIf="isExpanded">Tasks</span>
+            </a>
+        </li>
+        <!-- END OF MANAGER AND DEVELOPER LINKS -->
+    </ul>
+    <ul>
+        <li>
+            <span class="profile" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
+                <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">account_circle</span>
+                <span *ngIf="isExpanded">Profile</span>
+            </span>
+        </li>
+    </ul>
+</nav>

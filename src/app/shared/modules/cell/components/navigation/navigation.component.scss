@@ -1,0 +1,42 @@
+@import 'src/assets/scss/mixins';
+@import 'src/assets/scss/variables';
+
+nav {
+    @include flex(column, space-between, center);
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 73px;
+    height: calc(100% - 73px);
+    padding: 1rem 0;
+    background: $primary-color;
+    border-right: 1px solid $secondary-color;
+    &.expand-nav {
+        width: 150px;
+    }
+}
+
+ul {
+    margin: 0 auto;
+    width: 100%;
+}
+
+li {
+    @include flex(row, flex-start, center);
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    &:hover {
+        color: $primary-color;
+        background: $secondary-color;
+    }
+    a, .profile {
+        @include flex(row, center, center);
+    }
+}
+
+.active {
+    color: $primary-color;
+    background: $secondary-color;
+}

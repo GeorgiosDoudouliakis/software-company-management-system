@@ -1,0 +1,54 @@
+@import 'src/assets/scss/mixins';
+@import 'src/assets/scss/variables';
+
+header {
+    @include flex(row, initial, center);
+    background: $primary-color;
+    border-bottom: 1px solid $secondary-color;
+}
+
+.material-icons {
+    color: #fff;
+}
+
+.open-menu {
+    padding: 1.5rem;
+    border-right: 1px solid $secondary-color;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    &::selection {
+        background: none;
+    }
+    &:hover {
+        color: $primary-color;
+        background: $secondary-color;
+    }
+}
+
+.company-info {
+    @include flex(row, space-between, center);
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.company-name {
+    @include flex(row, initial, center);
+    h1 {
+        font-size: 1.5rem;
+        margin-right: .5rem;
+        color: $secondary-color;
+    }
+    span {
+        margin-left: .5rem;
+        cursor: pointer;
+    }
+}
+
+.company-brand {
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    cursor: pointer;
+    span {
+        padding: 1rem;
+    }
+}
