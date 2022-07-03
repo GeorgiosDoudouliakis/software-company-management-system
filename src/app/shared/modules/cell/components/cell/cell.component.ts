@@ -2,8 +2,18 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cell',
-  templateUrl: './cell.component.html',
-  styleUrls: ['./cell.component.scss'],
+  template: `
+    <app-header></app-header>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`
+    main {
+      height: calc(100vh - 108px);
+    }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CellComponent implements OnInit {

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CellModule } from '@shared/modules/cell/cell.module';
+import { FooterModule } from '@shared/modules/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CellModule } from '@shared/modules/cell/cell.module';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    CellModule
+    CellModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
