@@ -31,7 +31,7 @@
                 <span *ngIf="isExpanded">Profile</span>
             </span>
 
-            <div *ngIf="isProfileOptionsSectionOpen">
+            <div *ngIf="isProfileOptionsSectionOpen" [ngStyle]="{ 'left': !isExpanded ? '80px' : '160px' }">
                 <a>Edit Profile</a>
                 <span>Log Out</span>
             </div>
