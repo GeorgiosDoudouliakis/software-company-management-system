@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,12 +6,9 @@ import { ChangeDetectionStrategy, Component, OnInit, Input, ChangeDetectorRef } 
   styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   public isExpanded: boolean = false;
+  public isProfileOptionsSectionOpen: boolean = false;
 
   constructor(public cdr: ChangeDetectorRef) { }
-
-  ngOnInit(): void {
-  }
-
 }

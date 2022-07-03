@@ -25,11 +25,16 @@
         <!-- END OF MANAGER AND DEVELOPER LINKS -->
     </ul>
     <ul>
-        <li [tooltip]="!isExpanded" title="Profile" placement="right">
+        <li class="profile" [tooltip]="!isExpanded" title="Profile" placement="right" (click)="isProfileOptionsSectionOpen = !isProfileOptionsSectionOpen">
             <span class="profile" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">account_circle</span>
                 <span *ngIf="isExpanded">Profile</span>
             </span>
+
+            <div *ngIf="isProfileOptionsSectionOpen">
+                <a>Edit Profile</a>
+                <span>Log Out</span>
+            </div>
         </li>
     </ul>
 </nav>

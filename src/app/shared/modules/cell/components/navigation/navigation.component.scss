@@ -27,12 +27,39 @@ li {
     padding: 1rem;
     cursor: pointer;
     transition: .4s ease-in-out;
-    &:hover {
+    &:hover:not(.profile) {
         color: $primary-color;
         background: $secondary-color;
     }
     a, .profile {
         @include flex(row, center, center);
+    }
+}
+
+.profile {
+    position: relative;
+    & > div {
+        @include flex(column, center, center);
+        position: absolute;
+        left: 80px;
+        bottom: 0;
+        width: 120px;
+        padding: .8rem 0;
+        background: $primary-color;
+        border-radius: 4px;
+        border: 1px solid $secondary-color;
+        z-index: 10;
+        a {
+            margin-bottom: .5rem;
+        }
+        a, span {
+            text-align: center;
+            width: 100%;
+            transition: .4s ease-in-out;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
     }
 }
 
