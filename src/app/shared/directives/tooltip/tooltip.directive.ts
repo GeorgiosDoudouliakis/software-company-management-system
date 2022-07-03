@@ -1,4 +1,5 @@
-import { AfterViewInit, Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[tooltip]'
@@ -9,11 +10,15 @@ export class TooltipDirective implements AfterViewInit {
   @Input() title: string;
   @Input() placement: "top" | "right" | "bottom" | "left";
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private elRef: ElementRef, 
+    private renderer: Renderer2
+  ) { }
 
   ngAfterViewInit(): void {
     if(this.show) {
-      this.tooltipElement = document.createElement("p");
+      this.tooltipElement = this.document.createElement("p");
       this.tooltipElement.classList.add("tooltip", this.placement);
       this.tooltipElement.innerText = this.title;
     }
