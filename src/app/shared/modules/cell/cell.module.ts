@@ -5,6 +5,7 @@ import { CellComponent } from './components/cell/cell.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { NavExpandedDirective } from './directives/nav-expanded.directive';
+import { TooltipModule } from '@shared/directives/tooltip/tooltip.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavExpandedDirective } from './directives/nav-expanded.directive';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TooltipModule
   ],
   exports: [CellComponent]
 })
