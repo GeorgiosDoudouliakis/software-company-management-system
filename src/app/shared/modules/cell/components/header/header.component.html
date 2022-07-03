@@ -1,11 +1,15 @@
 <header>
-    <span class="material-icons open-menu" [nav-expanded]="isExpanded" [nav]="nav">menu_open</span>
+    <div [tooltip]="true" title="Expand/Minimize Menu" placement="right">
+        <span class="material-icons open-menu" [nav-expanded]="isExpanded" [nav]="nav">menu_open</span>
+    </div>
     <div class="company-info">
         <div class="company-name">
             <h1>Software Company Management System</h1>
-            <span class="material-icons">edit</span>
+            <div [tooltip]="true" title="Edit Company Name" placement="right">
+                <span class="material-icons">edit</span>
+            </div>
         </div>
-        <div class="company-brand">
+        <div class="company-brand" [tooltip]="true" title="Edit Company Brand" placement="left">
             <span class="material-icons">add_business</span>
         </div>
     </div>

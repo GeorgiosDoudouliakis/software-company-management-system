@@ -29,6 +29,8 @@ li {
     position: absolute;
     font-size: 1rem;
     font-weight: bold;
+    text-align: center;
+    min-width: 120px;
     padding: .5rem;
     color: $primary-color;
     background: $secondary-color;
