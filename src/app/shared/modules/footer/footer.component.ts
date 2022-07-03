@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
   
     footer {
       background: $primary-color;
+      border-top: 2px solid $secondary-color;
     }
 
     p {

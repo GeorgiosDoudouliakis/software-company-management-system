@@ -11,7 +11,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   `,
   styles: [`
     main {
-      height: calc(100vh - 108px);
+      height: calc(100vh - 110px);
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
