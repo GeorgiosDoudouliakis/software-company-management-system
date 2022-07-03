@@ -10,8 +10,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     </main>
   `,
   styles: [`
+    @import 'src/assets/scss/variables';
+
     main {
       height: calc(100vh - 110px);
+      background: $gray-color;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
