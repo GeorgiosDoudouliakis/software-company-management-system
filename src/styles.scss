@@ -59,6 +59,28 @@ select {
     cursor: pointer;
 }
 
+// SNACKBAR CLASSES
+[class^="snackbar-"] {
+    color: #fff;
+    // .snackbar-error
+    &[class$="error"] {
+        background: $error-color;
+    }
+    // .snackbar-success
+    &[class$="success"] {
+        background: $success-color;
+    }
+    // .snackbar-warning
+    &[class$="warning"] {
+        color: #000;
+        background: $warning-color;
+    }
+    // .snackbar-info
+    &[class$="info"] {
+        background: $info-color;
+    }
+}
+
 // GLOBAL CLASSES
 .tooltip {
     position: absolute;
