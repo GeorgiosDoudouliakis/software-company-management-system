@@ -6,8 +6,7 @@ import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Rend
 })
 export class TooltipDirective implements AfterViewInit {
   private tooltipElement: HTMLParagraphElement;
-  @Input('tooltip') show: boolean;
-  @Input() title: string;
+  @Input('tooltip') title: string;
   @Input() placement: "top" | "right" | "bottom" | "left";
 
   constructor(
@@ -17,27 +16,17 @@ export class TooltipDirective implements AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    if(this.show) {
       this.tooltipElement = this.document.createElement("p");
       this.tooltipElement.classList.add("tooltip", this.placement);
       this.tooltipElement.innerText = this.title;
-    }
   }
 
   @HostListener("mouseover") onHover() {
-    if(this.show) {
-      this.renderer.setStyle(this.elRef.nativeElement, "position", "relative");
-      this.renderer.appendChild(this.elRef.nativeElement, this.tooltipElement);
-      return;
-    } 
-    return false;
+    this.renderer.setStyle(this.elRef.nativeElement, "position", "relative");
+    this.renderer.appendChild(this.elRef.nativeElement, this.tooltipElement);
   }
 
   @HostListener("mouseleave") onMouseLeave() {
-    if(this.show) {
-      this.renderer.removeChild(this.elRef.nativeElement, this.tooltipElement);
-      return;
-    }
-    return false;
+    this.renderer.removeChild(this.elRef.nativeElement, this.tooltipElement);
   }
 }
