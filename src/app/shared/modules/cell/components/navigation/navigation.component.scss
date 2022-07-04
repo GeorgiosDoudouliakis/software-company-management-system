@@ -31,6 +31,10 @@ li {
         color: $primary-color;
         background: $secondary-color;
     }
+    &.profile.open {
+        color: $primary-color;
+        background: $secondary-color;
+    }
     a, .profile {
         @include flex(row, center, center);
     }
@@ -54,6 +58,7 @@ li {
         a, span {
             text-align: center;
             width: 100%;
+            color: #fff;
             transition: .4s ease-in-out;
             &:hover {
                 color: $secondary-color;
