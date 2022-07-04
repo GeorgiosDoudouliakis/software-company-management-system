@@ -1,13 +1,13 @@
 <nav [ngClass]="!isExpanded ? '' : 'expand-nav'">
     <ul>
         <!-- ADMIN LINKS -->
-        <li tooltip="Company" placement="right">
+        <li>
             <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">business</span>
                 <span *ngIf="isExpanded">Company</span>
             </a>
         </li>
-        <li tooltip="Employees" placement="right">
+        <li>
             <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">    
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">people</span>
                 <span *ngIf="isExpanded">Employees</span>
@@ -16,7 +16,7 @@
         <!-- END OF ADMIN LINKS -->
 
         <!-- MANAGER AND DEVELOPER LINKS -->
-        <li tooltip="Tasks" placement="right">
+        <li>
             <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">    
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">task</span>
                 <span *ngIf="isExpanded">Tasks</span>
@@ -25,7 +25,7 @@
         <!-- END OF MANAGER AND DEVELOPER LINKS -->
     </ul>
     <ul>
-        <li class="profile" tooltip="Profile" placement="right" (click)="isProfileOptionsSectionOpen = !isProfileOptionsSectionOpen">
+        <li class="profile" (click)="isProfileOptionsSectionOpen = !isProfileOptionsSectionOpen" [ngClass]="{ 'open': isProfileOptionsSectionOpen }">
             <span class="profile" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">account_circle</span>
                 <span *ngIf="isExpanded">Profile</span>
