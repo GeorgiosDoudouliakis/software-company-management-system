@@ -1,13 +1,21 @@
 <div class="auth-page">
     <h2>LOG IN TO YOUR ACCOUNT</h2>
     <form>
-        <div class="form-control">
-            <span class="material-icons">email</span>
-            <input type="email" placeholder="Email" aria-label="Enter email">
+        <div class="form-control-wrapper">
+            <div class="form-control">
+                <span class="material-icons">email</span>
+                <input type="email" placeholder="Email" aria-label="Enter email">
+            </div>
+            <!-- <small class="error">Email is required</small> -->
+            <!-- <small class="error">Not valid email</small> -->
         </div>
-        <div class="form-control">
-            <span class="material-icons">lock</span>
-            <input type="password" placeholder="Password" aria-label="Enter password">
+        <div class="form-control-wrapper">
+            <div class="form-control">
+                <span class="material-icons">lock</span>
+                <input type="password" placeholder="Password" aria-label="Enter password">
+            </div>
+            <!-- <small class="error">Password is required</small> -->
+            <!-- <small class="error">Password must be at least 12 characters</small> -->
         </div>
     </form>
     <div class="more-actions">

@@ -22,7 +22,7 @@ html > * {
     font-family: RobotoRegular;
 }
 
-h1, h2, h3 {
+h1, h2, h3, small {
     font-family: RobotoBold;
 }
 
@@ -57,7 +57,7 @@ input {
 select {
     width: 100%;
     height: 33.59px;
-    margin-bottom: 1.5rem;
+    margin-bottom: .2rem;
     color: $secondary-color;
     background: $primary-color;
     cursor: pointer;
@@ -177,8 +177,13 @@ select {
     }
 }
 
+.form-control-wrapper:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
 .form-control {
     @include flex(row, initial, center);
+    margin-bottom: .2rem;
     .material-icons {
         padding: .3rem;
         color: $secondary-color;
@@ -189,9 +194,6 @@ select {
     input[type="email"] {
         width: 100%;
         height: 33.59px;
-    }
-    &:not(:last-of-type) {
-        margin-bottom: 1.5rem;
     }
 }
 
