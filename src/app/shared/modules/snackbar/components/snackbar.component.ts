@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, ComponentRef, Input, OnInit } from '@angular/core';
+import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
   selector: 'app-snackbar',
   template: `
     <div class="snackbar-{{ data.type }}">
       <p>{{ data.message }}</p>
-      <button><span class="material-icons">close</span></button>
+      <button (click)="snackbarService.close()"><span class="material-icons">close</span></button>
     </div>
   `,
   styles: [`
@@ -48,7 +49,7 @@ export class SnackbarComponent implements OnInit {
     type: "error" | "success" | "warning" | "info"; 
   };
 
-  constructor() { }
+  constructor(public snackbarService: SnackbarService) { }
 
   ngOnInit(): void {
   }

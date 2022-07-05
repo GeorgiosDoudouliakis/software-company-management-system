@@ -9,6 +9,8 @@ import { SnackbarComponent } from './components/snackbar.component';
   imports: [
     CommonModule
   ],
-  exports: [SnackbarComponent]
+  exports: [
+    SnackbarComponent
+  ]
 })
 export class SnackbarModule { }
