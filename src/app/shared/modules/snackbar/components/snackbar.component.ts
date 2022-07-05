@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, ComponentRef, Input, OnInit } from 
   template: `
     <div class="snackbar-{{ data.type }}">
       <p>{{ data.message }}</p>
-      <button class="primary-btn">OK</button>
+      <button><span class="material-icons">close</span></button>
     </div>
   `,
   styles: [`
@@ -32,6 +32,11 @@ import { ChangeDetectionStrategy, Component, ComponentRef, Input, OnInit } from 
 
     button {
       font-size: .9rem;
+      padding: 0;
+      background: inherit;
+      .material-icons {
+        color: #fff;
+      }
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
