@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, ComponentRef, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { SnackbarData } from '../models/snackbar.model';
 import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
@@ -42,15 +43,8 @@ import { SnackbarService } from '../services/snackbar.service';
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SnackbarComponent implements OnInit {
-  private componentRef: ComponentRef<SnackbarComponent>;
-  @Input() public data: { 
-    message: string; 
-    type: "error" | "success" | "warning" | "info"; 
-  };
+export class SnackbarComponent {
+  @Input() public data: SnackbarData;
 
   constructor(public snackbarService: SnackbarService) { }
-
-  ngOnInit(): void {
-  }
 }

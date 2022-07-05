@@ -1,5 +1,6 @@
 import { Injectable, ViewContainerRef } from '@angular/core';
 import { SnackbarComponent } from '../components/snackbar.component';
+import { SnackbarData } from '../models/snackbar.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class SnackbarService {
    *         data: data of the snackbar
    * @return void
    */
-  public open(vrc: ViewContainerRef, data: { message: string; type: "error" | "success" | "warning" | "info" }) {
+  public open(vrc: ViewContainerRef, data: SnackbarData) {
     this.saveViewContainerRef(vrc);
     const componentRef = vrc.createComponent(SnackbarComponent);
     componentRef.instance.data = data;
