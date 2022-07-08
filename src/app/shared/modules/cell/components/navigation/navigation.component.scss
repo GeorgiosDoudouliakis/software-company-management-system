@@ -31,10 +31,6 @@ li {
         color: $primary-color;
         background: $secondary-color;
     }
-    &.profile.open {
-        color: $primary-color;
-        background: $secondary-color;
-    }
     a, .profile {
         @include flex(row, center, center);
     }
@@ -42,6 +38,8 @@ li {
 
 .profile {
     position: relative;
+    color: $primary-color;
+    background: $secondary-color;
     & > div {
         @include flex(column, center, center);
         position: absolute;
