@@ -1,11 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SnackbarData } from '../models/snackbar.model';
 import { SnackbarService } from '../services/snackbar.service';
+import { fadeInAnimation } from "@shared/modules/snackbar/animations/fade-in.animation";
+import { fadeOutAnimation } from "@shared/modules/snackbar/animations/fade-out.animation";
 
 @Component({
   selector: 'app-snackbar',
   template: `
-    <div class="snackbar-{{ data.type }}">
+    <div class="snackbar-{{ data.type }}" @fadeIn @fadeOut>
       <p>{{ data.message }}</p>
       <button (click)="snackbarService.close()"><span class="material-icons">close</span></button>
     </div>
@@ -41,6 +43,7 @@ import { SnackbarService } from '../services/snackbar.service';
       }
     }
   `],
+  animations: [fadeInAnimation, fadeOutAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SnackbarComponent {
