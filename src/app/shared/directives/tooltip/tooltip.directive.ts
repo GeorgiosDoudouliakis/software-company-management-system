@@ -5,28 +5,28 @@ import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Rend
   selector: '[tooltip]'
 })
 export class TooltipDirective implements AfterViewInit {
-  private tooltipElement: HTMLParagraphElement;
+  private _tooltipElement: HTMLParagraphElement;
   @Input('tooltip') public title: string;
   @Input() public placement: "top" | "right" | "bottom" | "left";
 
   constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private elRef: ElementRef,
-    private renderer: Renderer2
+    @Inject(DOCUMENT) private _document: Document,
+    private _elRef: ElementRef,
+    private _renderer: Renderer2
   ) { }
 
   ngAfterViewInit(): void {
-      this.tooltipElement = this.document.createElement("p");
-      this.tooltipElement.classList.add("tooltip", this.placement);
-      this.tooltipElement.innerText = this.title;
+      this._tooltipElement = this._document.createElement("p");
+      this._tooltipElement.classList.add("tooltip", this.placement);
+      this._tooltipElement.innerText = this.title;
   }
 
   @HostListener("mouseover") onHover() {
-    this.renderer.setStyle(this.elRef.nativeElement, "position", "relative");
-    this.renderer.appendChild(this.elRef.nativeElement, this.tooltipElement);
+    this._renderer.setStyle(this._elRef.nativeElement, "position", "relative");
+    this._renderer.appendChild(this._elRef.nativeElement, this._tooltipElement);
   }
 
   @HostListener("mouseleave") onMouseLeave() {
-    this.renderer.removeChild(this.elRef.nativeElement, this.tooltipElement);
+    this._renderer.removeChild(this._elRef.nativeElement, this._tooltipElement);
   }
 }
