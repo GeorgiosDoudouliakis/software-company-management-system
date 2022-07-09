@@ -22,6 +22,10 @@ html > * {
     font-family: RobotoRegular;
 }
 
+h2, h3 {
+  color: $primary-color;
+}
+
 h1, h2, h3, small {
     font-family: RobotoBold;
 }
@@ -102,19 +106,19 @@ select {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     &.right {
         left: 80px;
         top: 50%;
         transform: translateY(-50%);
     }
-    
+
     &.bottom {
         top: 80px;
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     &.left {
         right: 80px;
         top: 50%;
