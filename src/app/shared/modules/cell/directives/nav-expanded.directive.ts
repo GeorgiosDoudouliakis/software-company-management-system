@@ -5,8 +5,8 @@ import { NavigationComponent } from '../components/navigation/navigation.compone
   selector: '[nav-expanded]'
 })
 export class NavExpandedDirective {
-  @Input('nav-expanded') isMenuExpanded: boolean = false;
-  @Input() nav: NavigationComponent;
+  @Input('nav-expanded') public isMenuExpanded: boolean = false;
+  @Input() public nav: NavigationComponent;
 
   constructor() { }
 
