@@ -6,10 +6,10 @@ import { SnackbarData } from '../models/snackbar.model';
   providedIn: 'root'
 })
 export class SnackbarService {
-  public _viewContainerRef: ViewContainerRef;
+  public viewContainerRef: ViewContainerRef;
 
   private saveViewContainerRef(value: ViewContainerRef) {
-    this._viewContainerRef = value;
+    this.viewContainerRef = value;
   }
 
   /**
@@ -24,6 +24,6 @@ export class SnackbarService {
   }
 
   public close() {
-    this._viewContainerRef.clear();
+    this.viewContainerRef.clear();
   }
 }
