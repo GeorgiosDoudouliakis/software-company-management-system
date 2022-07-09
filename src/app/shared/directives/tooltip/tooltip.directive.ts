@@ -6,12 +6,12 @@ import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Rend
 })
 export class TooltipDirective implements AfterViewInit {
   private tooltipElement: HTMLParagraphElement;
-  @Input('tooltip') title: string;
-  @Input() placement: "top" | "right" | "bottom" | "left";
+  @Input('tooltip') public title: string;
+  @Input() public placement: "top" | "right" | "bottom" | "left";
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private elRef: ElementRef, 
+    private elRef: ElementRef,
     private renderer: Renderer2
   ) { }
 
