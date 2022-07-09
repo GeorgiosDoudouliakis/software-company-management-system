@@ -1,0 +1,98 @@
+@import '../../../../../assets/scss/variables';
+@import '../../../../../assets/scss/mixins';
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.control {
+  @include flex(column, flex-start, initial);
+  label {
+    margin-bottom: .5rem;
+  }
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  @include flex(row, space-between, center);
+  margin-bottom: 1rem;
+  & > .control {
+    width: 50%;
+    &:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+input {
+  height: 33.59px;
+}
+
+input:not([type="file"]), textarea {
+  background: darken($gray-color, 8%);
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.select-brand {
+  margin-bottom: 1rem;
+  & > button {
+    margin-left: .5rem;
+    color: #fff;
+    background: lighten($primary-color, 10%);
+  }
+}
+
+.projects-services-wrapper {
+  @include flex(row, space-between, flex-start);
+}
+
+.services, .projects {
+  width: 50%;
+}
+
+.services > .add-service-wrapper, .projects > .add-project-wrapper {
+  @include flex(column, flex-start, flex-start);
+  margin-bottom: 1rem;
+  .title {
+    margin-bottom: .5rem;
+  }
+  button {
+    @include flex(row, center, center);
+    height: 33.58px;
+    padding: 0;
+    color: $primary-color;
+    background: $secondary-color;
+    border-radius: 0;
+  }
+}
+
+.add-project, .add-service {
+  @include flex(row, flex-start, center);
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+.services {
+  margin-left: 1rem;
+}
+
+.primary-btn {
+  margin-left: .5rem;
+}
