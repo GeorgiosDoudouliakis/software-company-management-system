@@ -114,13 +114,13 @@ select {
     }
 
     &.bottom {
-        top: 80px;
+        top: 40px;
         left: 50%;
         transform: translateX(-50%);
     }
 
     &.left {
-        right: 80px;
+        right: 30px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -152,7 +152,6 @@ select {
     @include flex(column, center, center);
     h2 {
         margin-bottom: 1rem;
-        color: $primary-color;
     }
     form {
         width: 400px;
