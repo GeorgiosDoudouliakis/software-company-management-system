@@ -6,6 +6,12 @@ import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Rend
 })
 export class TooltipDirective implements AfterViewInit {
   private _tooltipElement: HTMLParagraphElement;
+  private _reversePlacement = {
+    top: "bottom",
+    right: "left",
+    bottom: "top",
+    left: "right"
+  }
   @Input('tooltip') public title: string;
   @Input() public placement: "top" | "right" | "bottom" | "left";
 
@@ -23,6 +29,7 @@ export class TooltipDirective implements AfterViewInit {
 
   @HostListener("mouseover") onHover() {
     this._renderer.setStyle(this._elRef.nativeElement, "position", "relative");
+    this._tooltipElement.style[(this._reversePlacement as any)[this.placement]] =  (this._elRef.nativeElement.offsetWidth + 10) + 'px';
     this._renderer.appendChild(this._elRef.nativeElement, this._tooltipElement);
   }
 
