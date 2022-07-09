@@ -14,6 +14,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
     main {
       height: calc(100vh - 110px);
+      padding: 2rem 1rem;
       background: $gray-color;
     }
   `],
