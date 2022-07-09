@@ -1,10 +1,12 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {fadeInAnimation} from "@shared/animations/fade-in.animation";
+import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
 
 @Component({
   selector: 'app-list',
   template: `
     <ul class="list">
-      <li *ngFor="let item of items">
+      <li *ngFor="let item of items" @fadeIn @fadeOut>
         <span>{{ item }}</span>
         <div class="actions">
           <button tooltip="Edit" placement="bottom"><span class="material-icons info">edit</span></button>
@@ -37,6 +39,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
       }
     }
   `],
+  animations: [fadeInAnimation(500), fadeOutAnimation(500)],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent implements OnInit {
