@@ -4,13 +4,13 @@
         <li>
             <a routerLink="company" routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">business</span>
-                <span *ngIf="isExpanded">Company</span>
+                <span *ngIf="isExpanded" @fadeIn>Company</span>
             </a>
         </li>
         <li>
             <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">people</span>
-                <span *ngIf="isExpanded">Employees</span>
+                <span *ngIf="isExpanded" @fadeIn>Employees</span>
             </a>
         </li>
         <!-- END OF ADMIN LINKS -->
@@ -19,7 +19,7 @@
         <li>
             <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">task</span>
-                <span *ngIf="isExpanded">Tasks</span>
+                <span *ngIf="isExpanded" @fadeIn>Tasks</span>
             </a>
         </li>
         <!-- END OF MANAGER AND DEVELOPER LINKS -->
@@ -28,7 +28,7 @@
         <li class="profile" (click)="isProfileOptionsSectionOpen = !isProfileOptionsSectionOpen">
             <span [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">account_circle</span>
-                <span *ngIf="isExpanded">Profile</span>
+                <span *ngIf="isExpanded" @fadeIn>Profile</span>
             </span>
 
             <div *ngIf="isProfileOptionsSectionOpen" [ngStyle]="{ 'left': !isExpanded ? '80px' : '160px' }">
