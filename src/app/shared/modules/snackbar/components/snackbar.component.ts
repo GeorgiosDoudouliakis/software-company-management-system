@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SnackbarData } from '../models/snackbar.model';
 import { SnackbarService } from '../services/snackbar.service';
-import { fadeInAnimation } from "@shared/modules/snackbar/animations/fade-in.animation";
-import { fadeOutAnimation } from "@shared/modules/snackbar/animations/fade-out.animation";
+import { fadeInAnimation } from "@shared/animations/fade-in.animation";
+import { fadeOutAnimation } from "@shared/animations/fade-out.animation";
 
 @Component({
   selector: 'app-snackbar',
@@ -43,7 +43,7 @@ import { fadeOutAnimation } from "@shared/modules/snackbar/animations/fade-out.a
       }
     }
   `],
-  animations: [fadeInAnimation, fadeOutAnimation],
+  animations: [fadeInAnimation(850), fadeOutAnimation(850)],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SnackbarComponent {
