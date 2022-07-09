@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-cell',
   template: `
-    <app-header></app-header>
+    <app-header (isNavExpandedHandler)="isNavExpanded = $event"></app-header>
 
-    <main>
+    <main [ngStyle]="{ 'margin-left': isNavExpanded ? '150px' : '73px' }">
         <router-outlet></router-outlet>
     </main>
   `,
@@ -19,11 +19,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CellComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class CellComponent {
+  public isNavExpanded: boolean = false;
 }

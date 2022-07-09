@@ -1,6 +1,6 @@
 <header>
     <div tooltip="Expand/Minimize Menu" placement="right">
-        <span class="material-icons open-menu" [nav-expanded]="isExpanded" [nav]="nav">menu_open</span>
+        <span class="material-icons open-menu" [nav-expanded]="isExpanded" [nav]="nav" (click)="isNavExpandedHandler.emit(nav.isExpanded)">menu_open</span>
     </div>
     <div class="company-info">
         <div class="company-name">
