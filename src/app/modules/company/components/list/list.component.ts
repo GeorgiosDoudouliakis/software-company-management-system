@@ -9,8 +9,8 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
       <li *ngFor="let item of items" @fadeIn @fadeOut>
         <span>{{ item }}</span>
         <div class="actions">
-          <button tooltip="Edit" placement="bottom"><span class="material-icons info">edit</span></button>
-          <button tooltip="Delete" placement="bottom"><span class="material-icons error">delete</span></button>
+          <button tooltip="Edit" placement="left"><span class="material-icons info">edit</span></button>
+          <button tooltip="Delete" placement="left"><span class="material-icons error">delete</span></button>
         </div>
       </li>
     </ul>
