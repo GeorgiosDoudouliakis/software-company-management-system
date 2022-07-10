@@ -142,7 +142,7 @@ select {
     form {
         width: 400px;
         padding: 2rem 2rem 1.5rem 2rem;
-        background: darken($gray-color, 8%);
+        background: $darker-gray-color;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -151,7 +151,7 @@ select {
         width: 100%;
         padding: 0 2rem 1.5rem 2rem;
         margin-bottom: 1rem;
-        background: darken($gray-color, 8%);
+        background: $darker-gray-color;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         a {

@@ -32,7 +32,7 @@ input {
 }
 
 input:not([type="file"]), textarea {
-  background: darken($gray-color, 8%);
+  background: $darker-gray-color;
 }
 
 .description {

@@ -53,7 +53,7 @@ li {
         bottom: -2px;
         width: 200px;
         padding: 1rem;
-        background: darken($gray-color, 8%);
+        background: $darker-gray-color;
         z-index: 10;
         box-shadow: 3px 0 10px darken($gray-color, 20%);
         a {

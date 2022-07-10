@@ -22,7 +22,7 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
     ul {
       li {
         @include flex(row, space-between, center);
-        background: darken($gray-color, 8%);
+        background: $darker-gray-color;
         padding: .5rem;
         &:not(:last-of-type) {
           margin-bottom: .5rem;

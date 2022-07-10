@@ -2,6 +2,7 @@
 $primary-color: #1d2437;
 $secondary-color: #f49900;
 $gray-color: #ebeef5;
+$darker-gray-color: darken($gray-color, 8%);
 $error-color: #dc3545;
 $success-color: #26823B;
 $info-color: #147E8F;
