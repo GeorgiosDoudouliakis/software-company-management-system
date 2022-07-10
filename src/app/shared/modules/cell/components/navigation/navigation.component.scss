@@ -50,24 +50,28 @@ li {
     & > div {
         @include flex(column, center, center);
         position: absolute;
-        bottom: 0;
-        width: 120px;
-        padding: .8rem 0;
-        background: $primary-color;
-        border-radius: 4px;
-        border: 1px solid $secondary-color;
+        bottom: -2px;
+        width: 200px;
+        padding: 1rem;
+        background: darken($gray-color, 8%);
         z-index: 10;
+        box-shadow: 3px 0 10px darken($gray-color, 20%);
         a {
             padding: unset;
-            margin-bottom: .5rem;
         }
-        a, span {
-            text-align: center;
+        a, .change-password {
+            margin-bottom: 1rem;
+        }
+        a, .change-password, .logout {
+            @include flex(row, flex-start, center);
             width: 100%;
-            color: #fff;
+            color: $primary-color;
             transition: .4s ease-in-out;
             &:hover {
                 color: $secondary-color;
+            }
+            span:first-of-type {
+              margin-right: .5rem;
             }
         }
     }

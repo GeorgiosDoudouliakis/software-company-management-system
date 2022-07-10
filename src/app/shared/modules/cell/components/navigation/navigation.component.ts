@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, ChangeDetectorRef } from '@angular/core';
 import {fadeInAnimation} from "@shared/animations/fade-in.animation";
+import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
 
 @Component({
   selector: 'app-navigation',
@@ -7,7 +8,8 @@ import {fadeInAnimation} from "@shared/animations/fade-in.animation";
   styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
-    fadeInAnimation(200, 200)
+    fadeInAnimation(200, 200),
+    fadeOutAnimation(200, 200)
   ]
 })
 export class NavigationComponent {

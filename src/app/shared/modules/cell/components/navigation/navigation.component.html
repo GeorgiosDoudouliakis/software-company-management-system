@@ -31,9 +31,10 @@
                 <span *ngIf="isExpanded" @fadeIn>Profile</span>
             </span>
 
-            <div *ngIf="isProfileOptionsSectionOpen" [ngStyle]="{ 'left': !isExpanded ? '80px' : '160px' }">
-                <a>Edit Profile</a>
-                <span>Log Out</span>
+            <div *ngIf="isProfileOptionsSectionOpen" [ngStyle]="{ 'left': !isExpanded ? '72px' : '160px' }" @fadeIn @fadeOut>
+                <a><span class="material-icons">settings</span><span>User Profile</span></a>
+                <span class="change-password"><span class="material-icons">lock</span><span>Change Password</span></span>
+                <span class="logout"><span class="material-icons">power_settings_new</span><span>Log Out</span></span>
             </div>
         </li>
     </ul>
