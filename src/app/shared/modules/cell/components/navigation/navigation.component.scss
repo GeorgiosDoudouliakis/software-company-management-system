@@ -56,6 +56,7 @@ li {
         background: $darker-gray-color;
         z-index: 10;
         box-shadow: 3px 0 10px darken($gray-color, 20%);
+        transition: .4s ease-in-out;
         a {
             padding: unset;
         }
