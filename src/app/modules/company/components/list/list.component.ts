@@ -20,6 +20,14 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
     @import 'src/assets/scss/mixins';
 
     ul {
+      height: 250px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $primary-color;
+      }
       li {
         @include flex(row, space-between, center);
         background: $darker-gray-color;
