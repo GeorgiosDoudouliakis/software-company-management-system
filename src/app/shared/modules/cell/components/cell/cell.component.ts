@@ -16,7 +16,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       height: calc(100vh - 110px);
       padding: 2rem 1rem;
       background: $gray-color;
-      overflow-y: scroll;
       transition: .4s ease-in-out;
     }
   `],
