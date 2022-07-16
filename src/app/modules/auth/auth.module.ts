@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ScSelectModule } from "@shared/modules/sc-modules/select/sc-select.module";
+import { ScSelectModule } from "@shared/modules/sc-modules/sc-select/sc-select.module";
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 
