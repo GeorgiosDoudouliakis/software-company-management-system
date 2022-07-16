@@ -8,7 +8,7 @@ import { ScSnackbarData } from '../models/sc-snackbar.model';
 export class ScSnackbarService {
   public viewContainerRef: ViewContainerRef;
 
-  private saveViewContainerRef(value: ViewContainerRef) {
+  private saveViewContainerRef(value: ViewContainerRef): void {
     this.viewContainerRef = value;
   }
 
@@ -17,13 +17,13 @@ export class ScSnackbarService {
    *         scData: data of the snackbar
    * @return void
    */
-  public open(scVrc: ViewContainerRef, scData: ScSnackbarData) {
+  public open(scVrc: ViewContainerRef, scData: ScSnackbarData): void {
     this.saveViewContainerRef(scVrc);
     const componentRef = scVrc.createComponent(ScSnackbarComponent);
     componentRef.instance.scData = scData;
   }
 
-  public close() {
+  public close(): void {
     this.viewContainerRef.clear();
   }
 }
