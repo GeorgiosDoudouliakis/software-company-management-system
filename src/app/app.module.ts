@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CellModule } from '@shared/modules/cell/cell.module';
-import { FooterModule } from '@shared/modules/footer/footer.module';
+import { CellModule } from './modules/cell/cell.module';
+import { FooterModule } from './modules/footer/footer.module';
 
 @NgModule({
   declarations: [
