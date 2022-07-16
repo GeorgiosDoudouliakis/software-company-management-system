@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Option} from "../../../models/select-option.model";
+import {Option} from "../../models/select-option.model";
 
 @Component({
   selector: 'sc-select[scLabel][scOptions][scWidth]',
