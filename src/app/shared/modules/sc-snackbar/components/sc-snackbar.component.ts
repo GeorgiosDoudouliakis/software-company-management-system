@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { SnackbarData } from '../models/snackbar.model';
-import { SnackbarService } from '../services/snackbar.service';
+import { ScSnackbarData } from '../models/sc-snackbar.model';
+import { ScSnackbarService } from '../services/sc-snackbar.service';
 import { fadeInAnimation } from "@shared/animations/fade-in.animation";
 import { fadeOutAnimation } from "@shared/animations/fade-out.animation";
 
 @Component({
-  selector: 'app-snackbar[data]',
+  selector: 'sc-snackbar[scData]',
   template: `
-    <div class="snackbar-{{ data.type }}" @fadeIn @fadeOut>
-      <p>{{ data.message }}</p>
+    <div class="snackbar-{{ scData.type }}" @fadeIn @fadeOut>
+      <p>{{ scData.message }}</p>
       <button (click)="snackbarService.close()"><span class="material-icons">close</span></button>
     </div>
   `,
@@ -46,8 +46,8 @@ import { fadeOutAnimation } from "@shared/animations/fade-out.animation";
   animations: [fadeInAnimation(850), fadeOutAnimation(850)],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SnackbarComponent {
-  @Input() public data: SnackbarData;
+export class ScSnackbarComponent {
+  @Input() public scData: ScSnackbarData;
 
-  constructor(public snackbarService: SnackbarService) { }
+  constructor(public snackbarService: ScSnackbarService) { }
 }
