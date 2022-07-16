@@ -5,7 +5,7 @@ import { fadeInAnimation } from "@shared/animations/fade-in.animation";
 import { fadeOutAnimation } from "@shared/animations/fade-out.animation";
 
 @Component({
-  selector: 'app-snackbar',
+  selector: 'app-snackbar[data]',
   template: `
     <div class="snackbar-{{ data.type }}" @fadeIn @fadeOut>
       <p>{{ data.message }}</p>

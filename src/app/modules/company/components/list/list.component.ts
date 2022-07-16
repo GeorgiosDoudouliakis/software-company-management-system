@@ -3,7 +3,7 @@ import {fadeInAnimation} from "@shared/animations/fade-in.animation";
 import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-list[items]',
   template: `
     <ul class="list">
       <li *ngFor="let item of items" @fadeIn @fadeOut>
