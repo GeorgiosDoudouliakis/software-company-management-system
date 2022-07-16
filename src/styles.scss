@@ -58,15 +58,6 @@ input {
     }
 }
 
-select {
-    width: 100%;
-    height: 33.59px;
-    margin-bottom: .2rem;
-    color: $secondary-color;
-    background: $primary-color;
-    cursor: pointer;
-}
-
 // SNACKBAR CLASSES
 [class^="snackbar-"] {
     color: #fff;

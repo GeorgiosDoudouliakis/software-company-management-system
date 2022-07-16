@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SELECT_ROLE_OPTIONS } from './select-role-options.mock';
+import { Option } from "@shared/models/select-option.model";
 
 @Component({
   selector: 'app-signup',
@@ -18,6 +20,7 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class SignupComponent implements OnInit {
+  public selectRoleOptions: Option[] = SELECT_ROLE_OPTIONS;
 
   constructor() { }
 

@@ -1,0 +1,5 @@
+<select [attr.aria-label]="scLabel" [ngStyle]="{ 'width': scWidth + '%' }">
+  <option selected disabled>{{ scLabel }}</option>
+  <option *ngFor="let option of scOptions" [value]="option.value">{{ option.name }}</option>
+</select>
+<!-- <small class="error">Role is required</small> -->

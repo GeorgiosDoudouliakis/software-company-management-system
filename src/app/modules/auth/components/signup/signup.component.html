@@ -2,13 +2,7 @@
     <h2>CREATE YOUR ACCOUNT</h2>
     <form>
         <div class="form-control-wrapper">
-            <select aria-label="Select role">
-                <option selected disabled>Choose your role</option>
-                <option value="company-owner">Company owner</option>
-                <option value="manager">Manager</option>
-                <option value="developer">Developer</option>
-            </select>
-            <!-- <small class="error">Role is required</small> -->
+            <sc-select scLabel="Select role" [scOptions]="selectRoleOptions" [scWidth]="100"></sc-select>
         </div>
         <div class="form-control-wrapper">
             <div class="form-control">
