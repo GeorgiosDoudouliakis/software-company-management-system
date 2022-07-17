@@ -48,6 +48,28 @@ button {
     cursor: pointer;
 }
 
+.control {
+  @include flex(column, flex-start, initial);
+  label {
+    margin-bottom: .5rem;
+  }
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.controls-wrapper {
+  @include flex(row, space-between, center);
+  margin-bottom: 1rem;
+  & > .control {
+    width: 50%;
+    &:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}
+
 input {
     text-indent: 10px;
     color: $primary-color;

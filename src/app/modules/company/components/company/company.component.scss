@@ -1,28 +1,6 @@
 @import '../../../../../assets/scss/variables';
 @import '../../../../../assets/scss/mixins';
 
-.control {
-  @include flex(column, flex-start, initial);
-  label {
-    margin-bottom: .5rem;
-  }
-}
-
-form {
-  margin-bottom: 2rem;
-}
-
-.wrapper {
-  @include flex(row, space-between, center);
-  margin-bottom: 1rem;
-  & > .control {
-    width: 50%;
-    &:nth-child(2) {
-      margin-left: 1rem;
-    }
-  }
-}
-
 input {
   height: 33.59px;
 }
