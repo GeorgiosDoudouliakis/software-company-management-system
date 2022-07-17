@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActiveTabService} from "../../services/active-tab.service";
 
 @Component({
   selector: 'app-employees',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public activeTabService: ActiveTabService) { }
 
   ngOnInit(): void {
   }

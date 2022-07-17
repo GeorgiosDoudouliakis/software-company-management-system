@@ -1,1 +1,8 @@
-<p>employees works!</p>
+<div class="header-tabs-wrapper">
+  <h2>EMPLOYEES</h2>
+  <app-tabs></app-tabs>
+</div>
+<ng-container [ngSwitch]="activeTabService.activeTab">
+  <app-create *ngSwitchCase="'create'"></app-create>
+  <app-list *ngSwitchCase="'list'"></app-list>
+</ng-container>
