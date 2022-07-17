@@ -177,11 +177,11 @@ input {
     }
 }
 
-.form-control-wrapper:not(:last-of-type) {
+.auth-form-control-wrapper:not(:last-of-type) {
     margin-bottom: 1rem;
 }
 
-.form-control {
+.auth-form-control {
     @include flex(row, initial, center);
     margin-bottom: .2rem;
     .material-icons {
