@@ -55,10 +55,6 @@ button {
   }
 }
 
-form {
-  margin-bottom: 2rem;
-}
-
 .controls-wrapper {
   @include flex(row, space-between, center);
   margin-bottom: 1rem;

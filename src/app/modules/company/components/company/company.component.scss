@@ -1,6 +1,10 @@
 @import '../../../../../assets/scss/variables';
 @import '../../../../../assets/scss/mixins';
 
+form {
+  margin-bottom: 2rem;
+}
+
 input {
   height: 33.59px;
 }
