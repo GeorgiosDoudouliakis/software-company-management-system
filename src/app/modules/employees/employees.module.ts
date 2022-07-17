@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
+import { ScSelectModule } from "@shared/modules/sc-select/sc-select.module";
 import { EmployeesComponent } from './components/employees/employees.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { CreateComponent } from './components/create/create.component';
 import { ListComponent } from './components/list/list.component';
-import {ActiveTabService} from "./services/active-tab.service";
+import { ActiveTabService } from "./services/active-tab.service";
 
 const routes = [
   {
@@ -23,7 +24,8 @@ const routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ScSelectModule
   ],
   exports: [
     RouterModule

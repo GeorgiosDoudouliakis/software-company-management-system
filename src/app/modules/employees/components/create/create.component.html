@@ -1,1 +1,26 @@
-<p>create works!</p>
+<form @fadeIn>
+  <div class="controls-wrapper">
+    <div class="control">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name">
+  <!--    <small class="error">First name is required</small>-->
+    </div>
+    <div class="control">
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name">
+      <!--    <small class="error">First name is required</small>-->
+    </div>
+  </div>
+  <div class="controls-wrapper">
+    <div class="control">
+      <label for="birthdate">Birthdate</label>
+      <input type="date" id="birthdate">
+  <!--    <small class="error">Birthdate is required</small>-->
+    </div>
+    <div class="control">
+      <sc-select scLabel="Select developer role" [scOptions]="selectRoleOptions" [scWidth]="100"></sc-select>
+    </div>
+  </div>
+</form>
+<button class="secondary-btn">Reset</button>
+<button class="primary-btn" type="submit">Save</button>
