@@ -8,7 +8,7 @@
             </a>
         </li>
         <li>
-            <a routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
+            <a routerLink="employees" routerLinkActive="active" [ngStyle]="{ 'margin': isExpanded ? '0 auto 0 0' : 'auto' }">
                 <span class="material-icons" [ngStyle]="{ 'margin-right': isExpanded ? '.5rem' : '0' }">people</span>
                 <span *ngIf="isExpanded" @fadeIn>Employees</span>
             </a>
