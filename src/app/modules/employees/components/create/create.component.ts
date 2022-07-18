@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {SELECT_ROLE_OPTIONS} from "./select-role-options.mock";
 import {Option} from "@shared/models/select-option.model";
+import {AVAILABLE_PROJECTS} from "./available-projects.mock";
 
 @Component({
   selector: 'app-create',
@@ -11,6 +12,7 @@ import {Option} from "@shared/models/select-option.model";
 })
 export class CreateComponent implements OnInit {
   public selectRoleOptions: Option[] = SELECT_ROLE_OPTIONS;
+  public availableProjects: Option[] = AVAILABLE_PROJECTS;
 
   constructor() { }
 

@@ -11,15 +11,23 @@
       <!--    <small class="error">First name is required</small>-->
     </div>
   </div>
-  <div class="controls-wrapper">
+  <div class="controls-wrapper" style="margin-bottom: 1.5rem;">
     <div class="control">
       <label for="birthdate">Birthdate</label>
       <input type="date" id="birthdate">
   <!--    <small class="error">Birthdate is required</small>-->
     </div>
     <div class="control">
-      <sc-select scLabel="Select developer role" [scOptions]="selectRoleOptions" [scWidth]="100" [scMultiple]="false"></sc-select>
+      <sc-select class="select-role" scLabel="Select developer role" [scOptions]="selectRoleOptions" [scWidth]="100" [scMultiple]="false"></sc-select>
     </div>
+  </div>
+  <div class="control">
+    <sc-select class="select-projects" scLabel="Select project(s)" [scOptions]="availableProjects" [scWidth]="100" [scMultiple]="true"></sc-select>
+    <p class="info select-projects-info">
+      <span class="material-icons">info</span>
+      <span>Hold <kbd>Ctrl</kbd> + <kbd>Left Click</kbd> to select multiple projects</span>
+    </p>
+<!--    <small class="error">You have to select at least on project</small>-->
   </div>
 </form>
 <button class="secondary-btn">Reset</button>
