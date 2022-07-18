@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {SELECT_ROLE_OPTIONS} from "./select-role-options.mock";
 import {Option} from "@shared/models/select-option.model";
 
@@ -6,7 +6,8 @@ import {Option} from "@shared/models/select-option.model";
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class CreateComponent implements OnInit {
   public selectRoleOptions: Option[] = SELECT_ROLE_OPTIONS;

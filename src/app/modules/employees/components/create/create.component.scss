@@ -1,9 +1,16 @@
+@import 'src/assets/scss/variables';
+
 form {
   margin-bottom: 2rem;
 }
 
 .controls-wrapper:nth-child(2) {
   align-items: flex-end;
+}
+
+sc-select select {
+  color: $primary-color;
+  background: $darker-gray-color;
 }
 
 .primary-btn {
