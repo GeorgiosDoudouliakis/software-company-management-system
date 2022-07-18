@@ -1,5 +1,7 @@
-<select [attr.aria-label]="scLabel" [ngStyle]="{ 'width': scWidth + '%' }">
-  <option selected disabled>{{ scLabel }}</option>
-  <option *ngFor="let option of scOptions" [value]="option.value">{{ option.name }}</option>
+<select [attr.aria-label]="scLabel"
+        [ngStyle]="{ 'width': scWidth + '%', 'min-height': scMultiple ? '110px' : '33.59px', 'overflow': scMultiple ? 'hidden' : 'auto' }"
+        [multiple]="scMultiple">
+          <option selected disabled>{{ scLabel }}</option>
+          <option *ngFor="let option of scOptions" [value]="option.value">{{ option.name }}</option>
 </select>
 <!-- <small class="error">Role is required</small> -->
