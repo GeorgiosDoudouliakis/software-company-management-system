@@ -1,8 +1,10 @@
-<div class="header-tabs-wrapper">
-  <h2>EMPLOYEES</h2>
-  <app-tabs></app-tabs>
+<div @slideInTop>
+  <div class="header-tabs-wrapper">
+    <h2>EMPLOYEES</h2>
+    <app-tabs></app-tabs>
+  </div>
+  <ng-container [ngSwitch]="activeTabService.activeTab">
+    <app-create *ngSwitchCase="'create'"></app-create>
+    <app-list *ngSwitchCase="'list'"></app-list>
+  </ng-container>
 </div>
-<ng-container [ngSwitch]="activeTabService.activeTab">
-  <app-create *ngSwitchCase="'create'"></app-create>
-  <app-list *ngSwitchCase="'list'"></app-list>
-</ng-container>

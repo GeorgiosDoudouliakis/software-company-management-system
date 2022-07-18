@@ -1,51 +1,53 @@
-<h2>COMPANY</h2>
-<form>
-  <div class="controls-wrapper">
-      <div class="control">
-        <label for="company-name">Name</label>
-        <input type="text" id="company-name">
-<!--        <small class="error">Company name is required</small>-->
-      </div>
-      <div class="control">
-        <label for="company-establishment-date">Establishment</label>
-        <input type="date" id="company-establishment-date">
-<!--        <small class="error">Establishment date is required</small>-->
-      </div>
-  </div>
-  <div class="control description">
-    <label for="company-description">Description</label>
-    <textarea id="company-description"></textarea>
-<!--    <small class="error">Description is required</small>-->
-  </div>
-  <div class="select-brand">
-    <span>Pick a logo for your company</span>
-    <button (click)="$event.preventDefault(); logo.click()">Logo</button>
-    <input type="file" #logo>
-  </div>
-  <div class="projects-services-wrapper">
-    <div class="projects">
-      <div class="add-project-wrapper">
-        <span class="title" role="heading" aria-level="3">Projects</span>
-        <div class="add-project">
-          <input type="text" aria-label="Add project" placeholder="Project" #project>
-          <button (click)="$event.preventDefault()" tooltip="Add project" placement="left"><span class="material-icons">add</span></button>
+<div @slideInTop>
+  <h2>COMPANY</h2>
+  <form>
+    <div class="controls-wrapper">
+        <div class="control">
+          <label for="company-name">Name</label>
+          <input type="text" id="company-name">
+  <!--        <small class="error">Company name is required</small>-->
         </div>
-<!--        <small class="error">You must have at least one project</small>-->
-      </div>
-      <app-list [items]="projects.slice()"></app-list>
-    </div>
-    <div class="services">
-      <div class="add-service-wrapper">
-        <span class="title" role="heading" aria-level="3">Services</span>
-        <div class="add-service">
-          <input type="text" aria-label="Add service" placeholder="Service" #service>
-          <button (click)="$event.preventDefault()" tooltip="Add service" placement="left"><span class="material-icons">add</span></button>
+        <div class="control">
+          <label for="company-establishment-date">Establishment</label>
+          <input type="date" id="company-establishment-date">
+  <!--        <small class="error">Establishment date is required</small>-->
         </div>
-<!--        <small class="error">You must have at least one service</small>-->
-      </div>
-      <app-list [items]="services.slice()"></app-list>
     </div>
-  </div>
-</form>
-<button class="secondary-btn">Reset</button>
-<button class="primary-btn" type="submit">Save</button>
+    <div class="control description">
+      <label for="company-description">Description</label>
+      <textarea id="company-description"></textarea>
+  <!--    <small class="error">Description is required</small>-->
+    </div>
+    <div class="select-brand">
+      <span>Pick a logo for your company</span>
+      <button (click)="$event.preventDefault(); logo.click()">Logo</button>
+      <input type="file" #logo>
+    </div>
+    <div class="projects-services-wrapper">
+      <div class="projects">
+        <div class="add-project-wrapper">
+          <span class="title" role="heading" aria-level="3">Projects</span>
+          <div class="add-project">
+            <input type="text" aria-label="Add project" placeholder="Project" #project>
+            <button (click)="$event.preventDefault()" tooltip="Add project" placement="left"><span class="material-icons">add</span></button>
+          </div>
+  <!--        <small class="error">You must have at least one project</small>-->
+        </div>
+        <app-list [items]="projects.slice()"></app-list>
+      </div>
+      <div class="services">
+        <div class="add-service-wrapper">
+          <span class="title" role="heading" aria-level="3">Services</span>
+          <div class="add-service">
+            <input type="text" aria-label="Add service" placeholder="Service" #service>
+            <button (click)="$event.preventDefault()" tooltip="Add service" placement="left"><span class="material-icons">add</span></button>
+          </div>
+  <!--        <small class="error">You must have at least one service</small>-->
+        </div>
+        <app-list [items]="services.slice()"></app-list>
+      </div>
+    </div>
+  </form>
+  <button class="secondary-btn">Reset</button>
+  <button class="primary-btn" type="submit">Save</button>
+</div>
