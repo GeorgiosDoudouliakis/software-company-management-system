@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@an
 import {SELECT_ROLE_OPTIONS} from "./select-role-options.mock";
 import {Option} from "@shared/models/select-option.model";
 import {AVAILABLE_PROJECTS} from "./available-projects.mock";
+import {GENDER_OPTIONS} from "./gender-options.mock";
 
 @Component({
   selector: 'app-create',
@@ -13,6 +14,7 @@ import {AVAILABLE_PROJECTS} from "./available-projects.mock";
 export class CreateComponent implements OnInit {
   public selectRoleOptions: Option[] = SELECT_ROLE_OPTIONS;
   public availableProjects: Option[] = AVAILABLE_PROJECTS;
+  public genderOptions: Option[] = GENDER_OPTIONS;
 
   constructor() { }
 
