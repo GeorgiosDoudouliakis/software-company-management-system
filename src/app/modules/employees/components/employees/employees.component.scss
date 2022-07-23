@@ -1,5 +1,5 @@
 @import "src/assets/scss/mixins";
 
 .header-tabs-wrapper {
-  @include flex(row, space-between, center);
+  @include flex(row, space-between, flex-start);
 }
