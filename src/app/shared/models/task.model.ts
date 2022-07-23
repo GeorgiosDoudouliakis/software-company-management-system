@@ -1,6 +1,6 @@
 export type TaskStatus = 'To Do' | 'In Progress' | 'Done';
 
-export interface TaskModel {
+export interface Task {
   id: number;
   title: string;
   projectId: number;

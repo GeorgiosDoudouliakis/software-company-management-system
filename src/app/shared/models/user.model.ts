@@ -1,6 +1,6 @@
 export type UserRole = 'Company owner' | 'Manager' | 'Developer';
 
-export interface UserModel {
+export interface User {
   id: number;
   role: UserRole;
   firstName: string;

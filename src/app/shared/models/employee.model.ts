@@ -1,5 +1,5 @@
 import {Project} from "./project.model";
-import {TaskModel} from "./task.model";
+import {Task} from "./task.model";
 
 export type EmployeeRole = 'Front End Developer' | 'Back End Developer' | 'Full Stack Developer' | 'QA' | 'Support Engineer';
 
@@ -12,6 +12,6 @@ export interface Employee {
   gender: 'male' | 'female';
   role: EmployeeRole;
   projects: Project[];
-  tasks: TaskModel[];
+  tasks: Task[];
   isManager: boolean;
 }
