@@ -1,0 +1,65 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+:host {
+  width: 100%;
+}
+
+article {
+  @include flex(row, flex-start, flex-start);
+  padding: .5rem;
+  background: $darker-gray-color;
+  border-radius: 10px;
+  &.grid {
+    @include grid(3);
+  }
+  &.list {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.employee-image {
+  width: 80px;
+  height: 80px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.employee-info {
+  padding-left: 1rem;
+  h3 {
+    margin-bottom: .2rem;
+  }
+  h4 {
+    font-size: .8rem;
+    font-style: italic;
+  }
+}
+
+.employee-actions {
+  margin-top: .8rem;
+}
+
+button {
+  padding: 0;
+  background: transparent;
+  &:not(:first-of-type) {
+    margin-left: .5rem;
+  }
+}
+
+.assignment {
+  color: $primary-color;
+}
+
+.edit {
+  color: $info-color;
+}
+
+.delete {
+  color: $error-color;
+}

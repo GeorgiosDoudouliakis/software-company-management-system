@@ -9,6 +9,7 @@ import { ListComponent } from './components/list/list.component';
 import { ActiveTabService } from "./services/active-tab.service";
 import { ViewSelectComponent } from './components/view-select/view-select.component';
 import { TooltipModule } from "@shared/directives/tooltip/tooltip.module";
+import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 
 const routes = [
   {
@@ -23,7 +24,8 @@ const routes = [
     TabsComponent,
     CreateComponent,
     ListComponent,
-    ViewSelectComponent
+    ViewSelectComponent,
+    EmployeeCardComponent
   ],
   imports: [
     CommonModule,

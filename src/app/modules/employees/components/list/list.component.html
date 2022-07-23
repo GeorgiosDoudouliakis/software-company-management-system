@@ -1,1 +1,4 @@
-<app-view-select></app-view-select>
+<app-view-select #view></app-view-select>
+<section class="employee-wrapper" [ngClass]="{ 'grid': view.selectedView === 'grid', 'list': view.selectedView === 'list' }">
+  <app-employee-card *ngFor="let employee of employees" [employee]="employee" [view]="view.selectedView"></app-employee-card>
+</section>

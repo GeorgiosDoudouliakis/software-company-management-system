@@ -1,0 +1,14 @@
+<article [ngStyle]="{ 'margin-bottom': view === 'list' ? '30px' : '0' }">
+  <div class="employee-image">
+    <img src="/assets/images/{{ employee.gender }}_avatar.png" alt="" width="80" height="80">
+  </div>
+  <div class="employee-info">
+    <h3>{{ employee.firstName }} {{ employee.lastName }}</h3>
+    <h4>{{ employee.role }}</h4>
+    <div class="employee-actions">
+      <button tooltip="Assign on project(s)" placement="bottom"><span class="material-icons assignment">assignment</span></button>
+      <button tooltip="Edit" placement="bottom"><span class="material-icons edit">edit</span></button>
+      <button tooltip="Delete" placement="bottom"><span class="material-icons delete">delete</span></button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,12 @@
+@import 'src/assets/scss/mixins';
+
+.employee-wrapper {
+  height: 630px;
+  overflow-y: auto;
+  &.grid {
+    @include grid(3);
+  }
+  &.list {
+    @include flex(column, flex-start, flex-start);
+  }
+}
