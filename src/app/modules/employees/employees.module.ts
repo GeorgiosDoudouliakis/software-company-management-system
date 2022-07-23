@@ -7,6 +7,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { CreateComponent } from './components/create/create.component';
 import { ListComponent } from './components/list/list.component';
 import { ActiveTabService } from "./services/active-tab.service";
+import { ViewSelectComponent } from './components/view-select/view-select.component';
+import { TooltipModule } from "@shared/directives/tooltip/tooltip.module";
 
 const routes = [
   {
@@ -20,12 +22,14 @@ const routes = [
     EmployeesComponent,
     TabsComponent,
     CreateComponent,
-    ListComponent
+    ListComponent,
+    ViewSelectComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    ScSelectModule
+    ScSelectModule,
+    TooltipModule
   ],
   exports: [
     RouterModule
