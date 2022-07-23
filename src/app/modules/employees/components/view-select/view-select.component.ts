@@ -36,7 +36,6 @@ import {View} from "../../models/view";
     }
 
     .active-view {
-      background: $primary-color;
       span {
         color: $secondary-color;
       }
