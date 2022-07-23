@@ -42,6 +42,7 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
           button {
             padding: 0;
             background: inherit;
+            transition: none;
             &:last-of-type {
               margin-left: .5rem;
             }
