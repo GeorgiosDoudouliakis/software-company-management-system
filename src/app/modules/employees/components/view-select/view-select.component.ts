@@ -19,7 +19,7 @@ import {View} from "../../models/view";
 
     :host {
       @include flex(row, flex-end, center);
-      margin-top: 1rem;
+      margin: 1rem 0;
     }
 
     div {
