@@ -5,3 +5,10 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+}
