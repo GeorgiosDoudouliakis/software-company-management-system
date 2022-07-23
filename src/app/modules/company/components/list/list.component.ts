@@ -7,10 +7,13 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
   template: `
     <ul class="list">
       <li *ngFor="let item of items" @fadeIn @fadeOut>
-        <span>{{ item.name }}</span>
+<!--        <span>{{ item.name }}</span>-->
+        <input type="text" [value]="item.name" disabled #nameInput />
         <div class="actions">
-          <button tooltip="Edit" placement="left"><span class="material-icons info">edit</span></button>
-          <button tooltip="Delete" placement="left"><span class="material-icons error">delete</span></button>
+          <button type="button" *ngIf="!nameInput.disabled" tooltip="Stop editing" placement="left"><span class="material-icons" (click)="stopEdit(nameInput, item)">close</span></button>
+          <button type="button" *ngIf="!nameInput.disabled" tooltip="Save" placement="left"><span class="material-icons" (click)="save(nameInput, item)">save</span></button>
+          <button type="button" *ngIf="nameInput.disabled" tooltip="Edit" placement="left"><span class="material-icons info" (click)="startEdit(nameInput)">edit</span></button>
+          <button type="button" *ngIf="nameInput.disabled" tooltip="Delete" placement="left"><span class="material-icons error">delete</span></button>
         </div>
       </li>
     </ul>
@@ -46,6 +49,11 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
         }
       }
     }
+
+    input:not([disabled]) {
+      width: 500px;
+      background: $gray-color;
+    }
   `],
   animations: [fadeInAnimation(500), fadeOutAnimation(500)],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -58,4 +66,19 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public stopEdit(nameInput: HTMLInputElement, item: any): void {
+    nameInput.setAttribute('disabled', 'disabled');
+
+    if(nameInput.value !== item.name)
+      nameInput.value = item.name;
+  }
+
+  public startEdit(nameInput: HTMLInputElement): void {
+    nameInput.removeAttribute('disabled');
+  }
+
+  // TODO Save implementation
+  public save(nameInput: HTMLInputElement, item: any): void {
+
+  }
 }
