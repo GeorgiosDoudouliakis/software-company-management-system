@@ -3,7 +3,7 @@ import {TaskModel} from "./task.model";
 
 export type EmployeeRole = 'Front End Developer' | 'Back End Developer' | 'Full Stack Developer' | 'QA' | 'Support Engineer';
 
-export interface EmployeeModel {
+export interface Employee {
   id: number;
   firstName: string;
   lastName: string;
@@ -13,4 +13,5 @@ export interface EmployeeModel {
   role: EmployeeRole;
   projects: ProjectModel[];
   tasks: TaskModel[];
+  isManager: boolean;
 }
