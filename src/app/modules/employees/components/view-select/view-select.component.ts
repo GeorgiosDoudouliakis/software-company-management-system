@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {View} from "../../models/view";
 
 @Component({
@@ -47,7 +47,6 @@ import {View} from "../../models/view";
 })
 export class ViewSelectComponent implements OnInit {
   public selectedView: View = 'grid';
-  @Output() selectedViewHandler = new EventEmitter<View>();
 
   constructor() { }
 
@@ -56,6 +55,5 @@ export class ViewSelectComponent implements OnInit {
 
   public onViewSelect(view: View): void {
     this.selectedView = view;
-    this.selectedViewHandler.emit(view);
   }
 }
