@@ -7,7 +7,7 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
   template: `
     <ul class="list">
       <li *ngFor="let item of items" @fadeIn @fadeOut>
-        <span>{{ item }}</span>
+        <span>{{ item.name }}</span>
         <div class="actions">
           <button tooltip="Edit" placement="left"><span class="material-icons info">edit</span></button>
           <button tooltip="Delete" placement="left"><span class="material-icons error">delete</span></button>
@@ -51,7 +51,7 @@ import {fadeOutAnimation} from "@shared/animations/fade-out.animation";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent implements OnInit {
-  @Input() public items: string[] = [];
+  @Input() public items: any[] = [];
 
   constructor() { }
 

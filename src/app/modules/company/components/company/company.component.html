@@ -33,7 +33,7 @@
           </div>
   <!--        <small class="error">You must have at least one project</small>-->
         </div>
-        <app-list [items]="projects.slice()"></app-list>
+        <app-list [items]="projects.slice()" type="project"></app-list>
       </div>
       <div class="services">
         <div class="add-service-wrapper">
@@ -44,7 +44,7 @@
           </div>
   <!--        <small class="error">You must have at least one service</small>-->
         </div>
-        <app-list [items]="services.slice()"></app-list>
+        <app-list [items]="services.slice()" type="service"></app-list>
       </div>
     </div>
   </form>
