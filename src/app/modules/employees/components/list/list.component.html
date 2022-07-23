@@ -1,5 +1,5 @@
 <div>
-   <span>{{ employees.length }} employees found</span>
+  <span>{{ employees.length }} employees found</span>
   <app-view-select #view></app-view-select>
 </div>
 <section class="employee-wrapper" [ngClass]="{ 'grid': view.selectedView === 'grid', 'list': view.selectedView === 'list' }">
