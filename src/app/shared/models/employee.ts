@@ -7,6 +7,7 @@ export interface Employee {
   id: number;
   firstName: string;
   lastName: string;
+  image: string; // TODO type
   birthdate: string; // TODO type
   gender: 'male' | 'female';
   role: EmployeeRole;
