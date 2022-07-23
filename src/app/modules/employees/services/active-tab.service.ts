@@ -3,7 +3,7 @@ import {ActiveTab} from "../models/active-tab.model";
 
 @Injectable()
 export class ActiveTabService {
-  public activeTab: ActiveTab = 'create';
+  public activeTab: ActiveTab = 'list';
 
   constructor() { }
 }
