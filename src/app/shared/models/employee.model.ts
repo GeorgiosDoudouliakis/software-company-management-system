@@ -1,13 +1,13 @@
-import {ProjectModel} from "./project";
-import {TaskModel} from "./task";
+import {ProjectModel} from "./project.model";
+import {TaskModel} from "./task.model";
 
-export type EmployeeRole = 'front-end-developer' | 'back-end-developer' | 'full-stack-developer' | 'qa' | 'support-engineer';
+export type EmployeeRole = 'Front End Developer' | 'Back End Developer' | 'Full Stack Developer' | 'QA' | 'Support Engineer';
 
 export interface EmployeeModel {
   id: number;
   firstName: string;
   lastName: string;
-  image: string; // TODO type
+  image?: string; // TODO type
   birthdate: string; // TODO type
   gender: 'male' | 'female';
   role: EmployeeRole;
