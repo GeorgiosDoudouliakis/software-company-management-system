@@ -1,11 +1,11 @@
-import {Project} from "@shared/models/project";
+import {ProjectModel} from "@shared/models/project";
 
 export type TaskStatus = 'To Do' | 'In Progress' | 'Done';
 
-export interface Task {
+export interface TaskModel {
   id: number;
   title: string;
-  project: Project;
+  project: ProjectModel;
   estimation: string; // TODO type
   status: TaskStatus;
   dueDate: string; // TODO type

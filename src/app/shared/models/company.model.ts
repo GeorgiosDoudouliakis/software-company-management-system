@@ -1,11 +1,11 @@
-import {Project} from "./project";
+import {ProjectModel} from "./project";
 
-export interface Company {
+export interface CompanyModel {
   id: number;
   name: string;
   establishment: string; // TODO type
   description: string;
   logo: string; // TODO type
-  projects: Project[];
+  projects: ProjectModel[];
   services: string[];
 }
